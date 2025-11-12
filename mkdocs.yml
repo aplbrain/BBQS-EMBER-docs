@@ -1,1 +1,22 @@
 site_name: EMBER Docs
+
+theme:
+  name: material
+  language: en
+  logo: assets/ember-logo.png
+  favicon: assets/favicon.ico
+  palette:
+    primary: custom
+    accent: custom
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview: getting-started/index.md
+  - User Guide:
+    - Overview: user-guide/index.md
+    - user-guide/uploading-data.md
+    - user-guide/downloading-data.md
