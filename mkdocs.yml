@@ -1,4 +1,6 @@
 site_name: EMBER Docs
+repo_name: aplbrain/bbqs-ember-docs
+repo_url: https://github.com/aplbrain/BBQS-EMBER-docs
 
 theme:
   name: material
@@ -6,8 +8,21 @@ theme:
   logo: assets/ember-logo.png
   favicon: assets/favicon.ico
   palette:
-    primary: custom
-    accent: custom
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: deep orange
+      toggle:
+        icon: material/theme-light-dark
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: deep orange
+      toggle:
+        icon: material/theme-light-dark
+        name: Switch to light mode
 
 extra_css:
   - stylesheets/extra.css
