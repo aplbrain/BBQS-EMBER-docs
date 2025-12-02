@@ -2,19 +2,26 @@
 
 This repo contains user documentation for the EMBER Archive.
 
+The documentation site is built with [Markdown](https://www.markdownguide.org/) and [MkDocs](https://www.mkdocs.org/). Documentation is written as a collection of markdown files, and MkDocs is used to render the documentation as a website.
+
 ## Requirements
 
 - [uv](https://docs.astral.sh/uv/). Installation instructions can be found [here](https://docs.astral.sh/uv/getting-started/installation/)
 
 ## Development
 
-We are using [mkdocs](https://www.mkdocs.org) to render the documentation as a website. Documentation is written as a collection of markdown files.
+### Edit Content
 
-To render the website locally, run the following command:
+- Open the `.md` you'd like to edit
+- Makes changes & save
+
+### Preview Changes
+
+Run the following command:
 ```bash
 uv run mkdocs serve
 ```
-Then, navigate to http://localhost:8080.
+Then, open your browser to http://localhost:8080.
 
 ## Contributing
 
