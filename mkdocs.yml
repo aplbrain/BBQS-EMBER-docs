@@ -33,5 +33,5 @@ nav:
     - Overview: getting-started/index.md
   - User Guide:
     - Overview: user-guide/index.md
-    - user-guide/uploading-data.md
-    - user-guide/downloading-data.md
+    # - user-guide/uploading-data.md
+    # - user-guide/downloading-data.md
