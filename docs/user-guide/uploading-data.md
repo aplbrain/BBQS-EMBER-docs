@@ -1,4 +1,4 @@
-# Upload Data
+# Uploading Data
 
 These instructions will guide you on how to upload data to EMBER-DANDI. 
 
