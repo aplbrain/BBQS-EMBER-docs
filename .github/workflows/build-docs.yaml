@@ -1,0 +1,39 @@
+name: Build docs
+
+on:
+  workflow_call:
+    inputs:
+      upload-pages-artifact:
+        required: false
+        type: boolean
+        default: false
+        description: 'Whether to upload the build as an artifact'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version-file: ".python-version"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Install python deps
+        run: uv sync --locked
+
+      - name: Build
+        run: uv run mkdocs build --strict
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
