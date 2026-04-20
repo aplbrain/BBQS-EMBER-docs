@@ -33,5 +33,6 @@ nav:
     - Overview: getting-started/index.md
   - User Guide:
     - Overview: user-guide/index.md
+  - Example Standardization and Reproducibility: example-standardization-and-reproducibility/Suthana_Zenodo.md
     # - user-guide/uploading-data.md
     # - user-guide/downloading-data.md
