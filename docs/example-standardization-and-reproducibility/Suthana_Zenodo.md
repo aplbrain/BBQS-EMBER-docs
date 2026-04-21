@@ -21,7 +21,7 @@ Because of this, we opted to convert the data into an NWB extension: [`ndx-multi
 Each variable within the .mat files was then converted into the appropriate modality type within NWB with the relevant metadata capture (sampling rates, start times, descriptions of variables).
 
 <figure style="text-align: center;">
-    <img src="../assets/ZenodoConversionOutline.png" alt="Figure1_original" style="width: 100%; display:block; margin-left: auto; margin-right: auto;"> 
+    <img src="/assets/ZenodoConversionOutline.png" alt="Figure1_original" style="width: 100%; display:block; margin-left: auto; margin-right: auto;"> 
     <figcaption>Each variable of the four .mat files was converted into a container within a single NWB file</figcaption>
 </figure>
 
@@ -40,7 +40,7 @@ Below are a few examples:
   <h3>Fig. 1 Original</h3>
 </div>
 <figure style="text-align: center;">
-    <img src="../assets/Seeber2025_Fig1_orig.png" alt="Figure1_original" style="width: 70%; display:block; margin-left: auto; margin-right: auto;"> 
+    <img src="/assets/Seeber2025_Fig1_orig.png" alt="Figure1_original" style="width: 70%; display:block; margin-left: auto; margin-right: auto;"> 
   
 </figure>
 
@@ -50,7 +50,7 @@ Below are a few examples:
 </div>
 
 <figure style="text-align: center;">
-<img src="../assets/Seeber2025_Fig1d.png" alt="Figure1d_NWB" style="width: 70%; display:block; margin-left: auto; margin-right: auto;">
+<img src="/assets/Seeber2025_Fig1d.png" alt="Figure1d_NWB" style="width: 70%; display:block; margin-left: auto; margin-right: auto;">
 </figure>
 
 <br>
@@ -59,15 +59,15 @@ Below are a few examples:
   <h3>Fig 2. Original</h3>
 </div>
 <figure style="text-align: center;">
-    <img src="../assets/Seeber2025_Fig2_orig.png" alt="Figure2_original" style="width: 70%; display:block; margin-left: auto; margin-right: auto;"> 
+    <img src="/assets/Seeber2025_Fig2_orig.png" alt="Figure2_original" style="width: 70%; display:block; margin-left: auto; margin-right: auto;"> 
 </figure>
 
 <br>
 <div align="center">
-  <h3>Fig. 2b recreated in Python with NWB data</h3>
+  <h3>Fig. 2b top recreated in Python with NWB data</h3>
 </div>
 <figure style="text-align: center;">
-<img src="../assets/Seeber2025_Fig2b.png" alt="Figure2_NWB" style="width: 70%; display:block; margin-left: auto; margin-right: auto;">
+<img src="/assets/Seeber2025_Fig2b.png" alt="Figure2_NWB" style="width: 70%; display:block; margin-left: auto; margin-right: auto;">
 </figure>
 
 
@@ -75,7 +75,7 @@ Below are a few examples:
   <h3>Fig. 3 Original</h3>
 </div>
 <figure style="text-align: center;">
-    <img src="../assets/Seeber2025_Fig3_orig.png" alt="Figure3_original" style="width: 70%; display:block; margin-left: auto; margin-right: auto;"> 
+    <img src="/assets/Seeber2025_Fig3_orig.png" alt="Figure3_original" style="width: 70%; display:block; margin-left: auto; margin-right: auto;"> 
    
 </figure>
 <br>
@@ -83,7 +83,7 @@ Below are a few examples:
   <h3>Fig. 3a recreated in Python with NWB data</h3>
 </div>
 <figure style="text-align: center;">
-<img src="../assets/Seeber2025_Fig3a.png" alt="Figure3_NWB" style="width: 70%; display:block; margin-left: auto; margin-right: auto;">
+<img src="/assets/Seeber2025_Fig3a.png" alt="Figure3_NWB" style="width: 70%; display:block; margin-left: auto; margin-right: auto;">
 </figure>
 
 
@@ -93,7 +93,7 @@ Below are a few examples:
 </div>
 
 <figure style="text-align: center;">
-    <img src="../assets/Seeber2025_Fig4_orig.png" alt="Figure3_original" style="width: 70%; display:block; margin-left: auto; margin-right: auto;"> 
+    <img src="/assets/Seeber2025_Fig4_orig.png" alt="Figure3_original" style="width: 70%; display:block; margin-left: auto; margin-right: auto;"> 
 </figure>
 
 <br>
@@ -102,7 +102,7 @@ Below are a few examples:
   <h3>Fig. 4g recreated in Python with NWB data</h3>
 </div>
 <figure style="text-align: center;">
-<img src="../assets/Seeber2025_Fig4g.png" alt="Figure4_NWB" style="width: 70%; display:block; margin-left: auto; margin-right: auto;">
+<img src="/assets/Seeber2025_Fig4g.png" alt="Figure4_NWB" style="width: 70%; display:block; margin-left: auto; margin-right: auto;">
 </figure>
 
 ## Next Steps
