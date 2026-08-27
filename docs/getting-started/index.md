@@ -8,15 +8,20 @@ The EMBER Archive supports free storage and sharing of public neurophysiological
 
 ## Storage and Analytics Platforms
 
-EMBER has two data storage platforms - EMBER-DANDI and EMBER-Vault. EMBER-Hearth enables sandboxed analyses in the cloud on both of these platforms. 
+EMBER has two data storage platforms:
 
-!!! note 
-    EMBER-Hearth is currently in development. EMBER-DANDI and EMBER-Vault are functional.
 
-EMBER-DANDI supports multimodal data from both animals and humans. Human data must not contain any PHI/PII and must be completely deidentified. 
 
-If you want to store sensitive human data, use EMBER-Vault. 
+- **EMBER-DANDI**: supports multimodal data from both animals and humans. Human data must not contain any  HI/PII and must be completely deidentified. 
+- **EMBER-Vault**: HIPAA compliant, sensitive human data storage
 
+
+EMBER is planning development of one analytical platform:
+
+- **EMBER-Hearth**: enables sandboxed analyses in the cloud on both of these platforms. 
+
+
+<br>
 <figure style="text-align: center;">
   <div style="display: flex; flex-direction: column; gap: 16px; align-items: center;">
     
@@ -47,6 +52,7 @@ If you want to store sensitive human data, use EMBER-Vault.
 </figure>
 
 
+
 ## How do I upload data?
 
 1. Standardize your data.
@@ -55,6 +61,8 @@ If you want to store sensitive human data, use EMBER-Vault.
 
 
 ### Standardizing Data
+Data standardization is required for uploading to either of the EMBER storage platforms to enable easy and accessible reuse of data by secondary users who were not involved in the original study that created the data. 
+
 The general approach is to organize your data using the BIDS schema and convert relevant data into NWB. 
 
 BIDS broadly describes how to rename files and folders and organize them into a standardized directory. It als requires associated metadata files to help explain the experiment and data.
@@ -98,7 +106,7 @@ More specific instructions for how to standardize data can be found in the [User
 
 Feel free to use AI tools like ChatGPT and Codex to help you convert your data according to the standards.
 
-If you need help, please reach out to [help@emberarchive.org](mailto:help@emberarchive.org)
+If you need help, please reach out to [help@emberarchive.org](mailto:help@emberarchive.org).
 
 
 
