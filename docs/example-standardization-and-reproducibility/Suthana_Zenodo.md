@@ -33,7 +33,7 @@ Each variable within the .mat files was then converted into the appropriate moda
 
 The current version of the conversion script is located at https://github.com/brain-bbqs/reproforce/blob/main/suthana/Suthana_Zenodo_Conversion.py.
 
-## Verfication
+## Verification
 
 To verify that the original data was properly converted into NWB, we checked whether the NWB data could be used to replicate the MATLAB code and resulting figures. 
 

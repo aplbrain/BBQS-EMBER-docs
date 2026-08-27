@@ -26,4 +26,4 @@ Then, open your browser to http://localhost:8080.
 
 ## Contributing
 
-Contibutions are welcome through pull requests. Please notify the BBQS EMBER team for review.
+Contributions are welcome through pull requests. Please notify the BBQS EMBER team for review.

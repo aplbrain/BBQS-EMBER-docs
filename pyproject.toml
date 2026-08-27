@@ -9,3 +9,11 @@ dependencies = [
     "mkdocs-material>=9.7.0",
     "pymdown-extensions>=10.17.1",
 ]
+
+[tool.codespell]
+# Ref: https://github.com/codespell-project/codespell#using-a-config-file
+skip = '.git,.git-meta,.gitignore,.gitattributes,*.lock,*.css'
+check-hidden = true
+# ignore-regex = ''
+# shure - Shure (microphone brand, e.g. "Shure SM7B")
+ignore-words-list = 'shure'

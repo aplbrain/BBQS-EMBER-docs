@@ -14,10 +14,10 @@ The EMBER Archive supports free storage and sharing of public neurophysiological
 2. Register on EMBER
     - Navigate to the EMBER-DANDI [portal](https://dandi.emberarchive.org/) and click the Login button in the top right corner.
 3. Account Review and Approval
-    - After registering, you will receive an email confirming that your accounr is under review.
-    - While we try to review and approve accounts as soon as possible, this is a manual process and some reviews may take an extended time, especially for new GitHub acounts or non .edu email addresses.
+    - After registering, you will receive an email confirming that your account is under review.
+    - While we try to review and approve accounts as soon as possible, this is a manual process and some reviews may take an extended time, especially for new GitHub accounts or non .edu email addresses.
 4. Access EMBER
-    - Upon approal, you will be able to access EMBER by logging in through the Login button in the top right corner.
+    - Upon approval, you will be able to access EMBER by logging in through the Login button in the top right corner.
 
 For support or questions, please reach out to [help@emberarchive.org](mailto:help@emberarchive.org)
 
