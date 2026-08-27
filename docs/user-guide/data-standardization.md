@@ -56,6 +56,15 @@ Use for:
 - Audio recordings (speech, environment)
 - Motion capture
 
+##### BEP044 (Stimuli)
+
+<https://bids.neuroimaging.io/extensions/beps/bep_044.html>
+
+Use for:
+
+- Stimuli presented to participants (images, audio, video, text)
+- Stimulus metadata and provenance
+
 ### NWB (Neurodata Without Borders)
 
 <https://www.nwb.org/>
