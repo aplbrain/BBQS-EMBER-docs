@@ -15,28 +15,28 @@ This covers:
 ## 1. Relevant Data Standards
 Before formatting your dataset, familiarize yourself with the standards supported by the BBQS Program and the EMBER archive (defined by the BBQS DCAIC Data Standards Working Group):
 
-[https://docs.google.com/document/d/1vIJ01La9G76FfGywS3IbG4o1GR4qquS31MoJ2B4_4os/edit?usp=sharing]()
+<https://docs.google.com/document/d/1vIJ01La9G76FfGywS3IbG4o1GR4qquS31MoJ2B4_4os/edit?usp=sharing>
 
 A quick summary relevant to sensitive, multimodal human datasets (such as audio/video of participants) is outlined below.
 
 ### Core BIDS
 
-- BIDS specification: [https://bids.neuroimaging.io/]()
+- BIDS specification: <https://bids.neuroimaging.io/>
 - Defines folder structure, file naming, file types and metadata conventions for different data types
 
 ### BIDS Extensions Supported
 
 #### Intracranial / Microelectrode Data
 
-[https://bids-specification.readthedocs.io/en/stable/modality-specific-files/intracranial-electroencephalography.html]()
+<https://bids-specification.readthedocs.io/en/stable/modality-specific-files/intracranial-electroencephalography.html>
 
 #### MEG Data
 
-[https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetoencephalography.html#meg-recording-data]()
+<https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetoencephalography.html#meg-recording-data>
 
 #### BEP032 (iEEG / microelectrode extensions)
 
-[https://bids.neuroimaging.io/extensions/beps/bep_032.html]()
+<https://bids.neuroimaging.io/extensions/beps/bep_032.html>
 
 Use for:
 
@@ -48,7 +48,7 @@ Use for:
 
 ##### BEP047 (motion, audio, video)
 
-[https://bids.neuroimaging.io/extensions/beps/bep_047.html]()
+<https://bids.neuroimaging.io/extensions/beps/bep_047.html>
 
 Use for:
 
@@ -58,7 +58,7 @@ Use for:
 
 ### NWB (Neurodata Without Borders)
 
-[https://www.nwb.org/]()
+<https://www.nwb.org/>
 
 Recommended for:
 
@@ -88,8 +88,8 @@ Preparing your dataset involves three main steps:
 
 ### Step 3: Validate Locally
 
-- Use the dandi-cli (which used the NWB inspector, BIDS Validator ([https://bids.neuroimaging.io/tools/validator.html]()) etc) before uploading.
-- Please see the instructions here: [https://github.com/dandi/dandi-cli]()
+- Use the dandi-cli (which used the NWB inspector, BIDS Validator (<https://bids.neuroimaging.io/tools/validator.html>) etc) before uploading.
+- Please see the instructions here: <https://github.com/dandi/dandi-cli>
 
 ### Step 4: Upload via Globus 
 - Please see the instructions here: [Upload to EMBER-Vault via Globus](#11-upload-to-ember-vault-via-globus)
@@ -101,11 +101,11 @@ Preparing your dataset involves three main steps:
 
 BIDS specifies a particular set of folders and file names to organize data:
 
-[https://bids.neuroimaging.io/getting_started/folders_and_files/index.html]()
+<https://bids.neuroimaging.io/getting_started/folders_and_files/index.html>
 
 More examples will be made available at:
 
-[https://github.com/brain-bbqs]()
+<https://github.com/brain-bbqs>
 
 Here is a minimal multimodal dataset layout as an example, including iEEG in NWB formats and audio and video files:
 
@@ -277,11 +277,11 @@ To use EMBERvault, you must validate your dataset locally. The EMBERvault system
 
 You can find detailed instructions on use of the BIDS validator here:
 
-[https://bids.neuroimaging.io/tools/validator.html]()
+<https://bids.neuroimaging.io/tools/validator.html>
 
 We do not recommend using the online data validator for datasets containing PHI/PII.
 
-[https://bids-validator.readthedocs.io/en/latest/user_guide/command-line.html]()
+<https://bids-validator.readthedocs.io/en/latest/user_guide/command-line.html>
 
 #### Install
 
@@ -289,7 +289,7 @@ We do not recommend using the online data validator for datasets containing PHI/
 
 Using Deno:
 
-[https://docs.deno.com/runtime/getting_started/installation/]()
+<https://docs.deno.com/runtime/getting_started/installation/>
 
 ```bash
 deno install -ERWN -g -n bids-validator jsr:@bids/validator
