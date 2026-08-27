@@ -9,3 +9,10 @@ dependencies = [
     "mkdocs-material>=9.7.0",
     "pymdown-extensions>=10.17.1",
 ]
+
+[tool.codespell]
+# Ref: https://github.com/codespell-project/codespell#using-a-config-file
+skip = '.git,.gitignore,.gitattributes,*.lock,*.css'
+check-hidden = true
+# ignore-regex = ''
+# ignore-words-list = ''
