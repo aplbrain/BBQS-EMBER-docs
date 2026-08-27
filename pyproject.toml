@@ -12,7 +12,8 @@ dependencies = [
 
 [tool.codespell]
 # Ref: https://github.com/codespell-project/codespell#using-a-config-file
-skip = '.git,.gitignore,.gitattributes,*.lock,*.css'
+skip = '.git,.git-meta,.gitignore,.gitattributes,*.lock,*.css'
 check-hidden = true
 # ignore-regex = ''
-# ignore-words-list = ''
+# shure - Shure (microphone brand, e.g. "Shure SM7B")
+ignore-words-list = 'shure'
