@@ -4,5 +4,7 @@
 
 2. After standardizing the data, you must validate the converted data using the [DANDI CLI](../user-guide/dandi-cli.md).
 
+3. Create account(s) for the appropriate strage platform.
+
 3. Finally, upload your validated and standardized data to the appropriate storage platform [EMBER-DANDI](../user-guide/uploading-data.md) or [EMBER-Vault](../user-guide/embervault-uploading-data.md).
 
