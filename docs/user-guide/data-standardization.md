@@ -315,11 +315,15 @@ When using an extension, you must use the flag `--schema` with the link to the p
 --schema https://bids-specification--2231.org.readthedocs.build/en/2231/schema.json
 ```
 
+
 ### Expected Output
 
 - No errors → ready to upload
 - Warnings → usually acceptable but should be reviewed
 - Errors → must fix before upload to EMBER-Vault
+
+!!! warning
+    If you are using NWB files at all, you will need to validate those separately using the [DANDI CLI](../user-guide/uploading-data.md#upload-data-to-your-dandiset)
 
 ---
 

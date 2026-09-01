@@ -9,7 +9,7 @@ The ultimate goal for standardizing data is to enable secondary users to
 EMBER accepts two standards: BIDS and NWB. 
 
 - **BIDS (Brain Imaging Data Specification)** describes how to name files and organize them into appropriately named folders. It also requires metadata to describe data and the experiment. 
-- **NWB (Neurodata without Borders)** is a single file that can hold multiple data streams and associated metadata.
+- **NWB (Neurodata without Borders)** is a single file that can hold multiple data streams and associated metadata that correspond to a single experimental session.
 
 ## Which standard should I use for my data?
 
@@ -24,12 +24,12 @@ You can use the following decision aid to help you decide whether your data shou
 
 | Data characteristic | Standard | 
 | -- | -- |
-| My data are already separated by modality, session, and subject, and those modalities have established BIDS representations (e.g., separate EEG, video, audio, behavioral, or motion files). | BIDS |
-| A single file (e.g., .mat, .h5) of my data contains multiple time series modalities within it corresponding to the same recording session | NWB |
+| My data are already separated by modality, session, and subject, and those modalities have established BIDS representations (e.g., separate EEG, video, audio, physiology, event, stimulus, or motion files). | [BIDS](https://bids-specification.readthedocs.io/en/stable/) and [BIDS extensions](https://bids.neuroimaging.io/extensions/beps.html) |
+| A single file (e.g., .mat, .h5) of my data contains multiple time series modalities within it and/or featurized data corresponding to the same recording session | [NWB](https://nwb-schema.readthedocs.io/en/latest/format.html#type-specifications) and [NWB extensions](https://nwb-extensions.github.io) |
 
 If both descriptions apply to substantial portions of your dataset, consider a hybrid approach: use BIDS for the overall dataset organization and modalities that map naturally to established BIDS representations, and use NWB for integrated recordings that are better represented together.
 
-For example:
+For example, in the following dataset, the raw modalities (EEG and behavioral events) are represented in separate BIDS folders. In the BIDS derivatives folder, a NWB file that combines processed EEG, events, and kinematics represents the integrated data.
 
 ```
 my_study/
@@ -84,14 +84,14 @@ To help you get started, we've published some of the prompts and conversion scri
 
 There are two quality checks:
 
-1. Is your standardized data correctly formatted with all necessary metadata? In other words, can this data be uploaded to EMBER without yielding errors?
+1. Is your standardized data correctly formatted with all necessary metadata? In other words, does this data pass the [DANDI validator](../user-guide/uploading-data.md#upload-data-to-your-dandiset)?
 2. Can your standardized data be used by a secondary analyst who has little to no knowledge of your data to, at a minimum, recreate figures from your paper? 
 
 The first check is relatively quick - once your data is standardized, you can run validation checks to ensure that it can be uploaded (see [uploading data](..assets/user-guide/uploading-data.md)) without errors to EMBER. 
 
-The second check requires rebuilding analyses that were conducted on the original unstandardized data using the new, standardized data. At a minimum, this is recreation of figures generated for a publication.
+The second (optional) check requires rebuilding analyses that were conducted on the original unstandardized data using the new, standardized data. At a minimum, this is recreation of figures generated for a publication.
 
-
+EMBER-DANDI datasets that meet this second quality check will be denoted as "EMBER Verified".
 
 ### Getting Help
 

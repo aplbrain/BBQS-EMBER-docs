@@ -2,7 +2,7 @@
 
 1. The first step is to [standardize your data](../user-guide/data-standardization.md), which will be similar regardless of whether you are using EMBER-DANDI or EMBER-Vault.
 
-2. After standardizing the data, you must validate the converted data using the [DANDI CLI](../user-guide/dandi-cli.md).
+2. After standardizing the data, you must validate the converted data using the [DANDI CLI](../user-guide/uploading-data.md#instructions-for-new-users).
 
 3. Create account(s) for the appropriate strage platform.
 

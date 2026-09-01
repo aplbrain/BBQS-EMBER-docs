@@ -39,10 +39,11 @@ nav:
     - Overview: getting-started/index.md
   - User Guide:
     - Overview: user-guide/index.md
-    - 'EMBER: Standardizing Data': user-guide/data-standardization.md
+    - Standardizing Data:
+      - 'Overview': user-guide/standardizing-EMBERDANDI.md
+      - 'Detailed Instructions': user-guide/data-standardization.md
     - 'EMBER-DANDI': 
       - 'Account Creation': user-guide/EMBER-DANDI-account.md
-      - 'Data Standardization': user-guide/standardizing-EMBERDANDI.md
       - 'Uploading Data': user-guide/uploading-data.md
       - 'Downloading Data': user-guide/downloading-data.md
     - 'EMBER-Vault':
