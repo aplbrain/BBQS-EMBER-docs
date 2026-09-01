@@ -91,7 +91,8 @@ The first check is relatively quick - once your data is standardized, you can ru
 
 The second (optional) check requires rebuilding analyses that were conducted on the original unstandardized data using the new, standardized data. At a minimum, this is recreation of figures generated for a publication.
 
-EMBER-DANDI datasets that meet this second quality check will be denoted as "EMBER Verified".
+!!! success "EMBER-verified"
+    EMBER-DANDI datasets that meet this second quality check will be denoted as "EMBER Verified".
 
 ### Getting Help
 

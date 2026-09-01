@@ -1,5 +1,6 @@
 # Data Upload
 Once your user account and project have been set up, you are ready to upload your [***validated***](../user-guide/data-standardization.md#5-validation-required-before-upload) data to EMBER-Vault!
+To use EMBERvault, you must validate your dataset locally. The EMBERvault system is intended to store standardized data for reuse but does not currently format and validate data in-platform.
 
 **1. Log in via Globus & EMBER-Vault**
 <ol type="a">

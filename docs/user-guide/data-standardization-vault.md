@@ -1,6 +1,6 @@
 # Data Standardization for EMBER-DANDI and EMBER-Vault
 
-This guide walks you through a suggested procedure on how to prepare your dataset for upload using the BIDS standard, with support for common data types such as intracranial recordings, audio/video, and behavioral data, and optional use of NWB files.
+This guide walks you through a suggested procedure on how to prepare your dataset for upload using the BIDS standard, with support for intracranial recordings, audio/video, and behavioral data, and optional use of NWB files.
 
 This covers:
 
@@ -21,22 +21,22 @@ A quick summary relevant to sensitive, multimodal human datasets (such as audio/
 
 ### Core BIDS
 
-- BIDS specification: [https://bids.neuroimaging.io/](https://bids.neuroimaging.io/)
+- BIDS specification: [https://bids.neuroimaging.io/]()
 - Defines folder structure, file naming, file types and metadata conventions for different data types
 
 ### BIDS Extensions Supported
 
 #### Intracranial / Microelectrode Data
 
-[https://bids-specification.readthedocs.io/en/stable/modality-specific-files/intracranial-electroencephalography.html](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/intracranial-electroencephalography.html)
+[https://bids-specification.readthedocs.io/en/stable/modality-specific-files/intracranial-electroencephalography.html]()
 
 #### MEG Data
 
-[https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetoencephalography.html#meg-recording-data](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetoencephalography.html#meg-recording-data)
+[https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetoencephalography.html#meg-recording-data]()
 
 #### BEP032 (iEEG / microelectrode extensions)
 
-[https://bids.neuroimaging.io/extensions/beps/bep_032.html](https://bids.neuroimaging.io/extensions/beps/bep_032.html)
+[https://bids.neuroimaging.io/extensions/beps/bep_032.html]()
 
 Use for:
 
@@ -48,7 +48,7 @@ Use for:
 
 ##### BEP047 (motion, audio, video)
 
-[https://bids.neuroimaging.io/extensions/beps/bep_047.html](https://bids.neuroimaging.io/extensions/beps/bep_047.html)
+[https://bids.neuroimaging.io/extensions/beps/bep_047.html]()
 
 Use for:
 
@@ -58,19 +58,18 @@ Use for:
 
 ### NWB (Neurodata Without Borders)
 
-[https://www.nwb.org/](https://www.nwb.org/)
+[https://www.nwb.org/]()
 
 Recommended for:
 
 - Spike times
 - LFP
 - Rich electrophysiology metadata
-- General time series
 
 !!! info "Important"
     If using NWB files, we recommend the files should still be organized within a BIDS structure.
 
-
+---
 
 NWB extensions can be found at [https://nwb-extensions.github.io](https://nwb-extensions.github.io)
 
@@ -78,7 +77,7 @@ For multi-subject data (multiple subjects interacting, recorded at the same time
 
 !!! warning "`ndx-multisubjects`"
     This extension is undergoing development, and currently will not pass the validator. You can still use and upload this file to EMBER-DANDI using `--validation skip` argument until the validators are updated or this extension is incorporated into core NWB.
----
+
 ## 2. Standardization Workflow
 
 Preparing your dataset involves three main steps:
@@ -248,7 +247,7 @@ When combining these standards, our key recommendations are:
 
 ---
 
-## 4. Audio / Video (BEP047)
+## 4. Human Audio / Video (BEP047)
 
 Supported formats:
 
