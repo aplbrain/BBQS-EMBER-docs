@@ -278,7 +278,7 @@ For video:
 ## 5. Validation (Required Before Upload)
 
 Data uploaded to either EMBERVault or EMBER-DANDI must be properly standardized.
-
+***Can this section be updated to jsut use the dandi validator?***
 ### Command Line Validation for BIDS (Recommended)
 
 You can find detailed instructions on use of the BIDS validator here:
