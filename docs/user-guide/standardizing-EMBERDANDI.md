@@ -87,7 +87,7 @@ There are two quality checks:
 1. Is your standardized data correctly formatted with all necessary metadata? In other words, does this data pass the [DANDI validator](../user-guide/uploading-data.md#upload-data-to-your-dandiset)?
 2. Can your standardized data be used by a secondary analyst who has little to no knowledge of your data to, at a minimum, recreate figures from your paper? 
 
-The first check is relatively quick - once your data is standardized, you can run validation checks to ensure that it can be uploaded (see [uploading data](..assets/user-guide/uploading-data.md)) without errors to EMBER. 
+The first check is relatively quick - once your data is standardized, you can run validation checks to ensure that it can be uploaded (see [uploading data](../user-guide/uploading-data.md)) without errors to EMBER. 
 
 The second (optional) check requires rebuilding analyses that were conducted on the original unstandardized data using the new, standardized data. At a minimum, this is recreation of figures generated for a publication.
 

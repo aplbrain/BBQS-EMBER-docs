@@ -7,7 +7,7 @@ This covers:
 1. [The relevant standards](#1-relevant-data-standards)
 2. [The standardization process and examples](#2-standardization-workflow)
 3. [BIDS Standard](#3-bids-standard)
-4. [Human Audio/Video](#4-human-audio-video-bep047)
+4. [Audio/Video](#bep047-motion-audio-video)
 5. [Validation](#5-validation-required-before-upload)
 6. [Common Pitfalls](#6-common-pitfalls)
 7. [Recommended Workflow](#7-recommended-workflow-step-by-step)
