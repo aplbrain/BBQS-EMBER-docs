@@ -55,8 +55,8 @@ EMBER is planning development of one analytical platform:
 
 ## How do I upload data?
 
-1. Standardize your data.
-2. Create an account for each appropriate storage platform using instructions in the [User Guide](../user-guide/index.md).
+1. Create an account for each appropriate storage platform using instructions in the [User Guide](../user-guide/index.md).
+2. Standardize your data.
 3. Upload the standardized data to the appropriate storage platform(s) using instructions in the [User Guide](../user-guide/index.md).
 
 
