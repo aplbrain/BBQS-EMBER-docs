@@ -24,7 +24,6 @@ theme:
         icon: material/theme-light-dark
         name: Switch to light mode
 
-
 extra_css:
   - stylesheets/extra.css
 
@@ -40,9 +39,15 @@ nav:
     - Overview: getting-started/index.md
   - User Guide:
     - Overview: user-guide/index.md
-    - The DANDI Client: user-guide/dandi-cli.md
-    - 'EMBER-DANDI: Uploading Data': user-guide/uploading-data.md
-    - 'EMBER-DANDI: Downloading Data': user-guide/downloading-data.md
-    - 'EMBER-Vault: Uploading Data': user-guide/embervault-uploading-data.md
-    - 'EMBER: Standardizing Data': user-guide/data-standardization.md
+    - Standardizing Data:
+      - 'Overview': user-guide/standardizing-EMBERDANDI.md
+      - 'Detailed Instructions': user-guide/data-standardization.md
+    - 'EMBER-DANDI': 
+      - 'Account Creation': user-guide/EMBER-DANDI-account.md
+      - 'Uploading Data': user-guide/uploading-data.md
+      - 'Downloading Data': user-guide/downloading-data.md
+    - 'EMBER-Vault':
+      - 'Account Creation': user-guide/embervault-account.md
+      - 'Uploading Data': user-guide/embervault-uploading-data.md
+   
   - Example Standardization and Reproducibility: example-standardization-and-reproducibility/Suthana_Zenodo.md

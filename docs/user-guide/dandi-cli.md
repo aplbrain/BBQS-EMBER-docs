@@ -1,6 +1,6 @@
 # Getting Started with the DANDI Client 
 
-In thes instructions, you will install Python 3.9+ and then install the DANDI Python Client.
+In these instructions, you will install Python 3.9+ and then install the DANDI Python Client.
 
 ## Quick Steps
 

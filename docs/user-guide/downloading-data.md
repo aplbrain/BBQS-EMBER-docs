@@ -25,7 +25,7 @@ dandi download https://dandi.emberarchive.org/dandiset/<dandiset_id>/<version>
 
 ### Install Python and the DANDI Client
 
-Please refer to our [Dandi Client](dandi-cli.md) page.
+Please refer to our [Dandi Client](../user-guide/uploading-data.md#instructions-for-new-users) instructions.
 
 ### Download a full dandiset
 
