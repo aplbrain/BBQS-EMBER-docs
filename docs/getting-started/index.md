@@ -65,7 +65,7 @@ Data standardization is required for uploading to either of the EMBER storage pl
 
 The general approach is to organize your data using the BIDS schema and convert relevant data into NWB. 
 
-BIDS broadly describes how to rename files and folders and organize them into a standardized directory. It als requires associated metadata files to help explain the experiment and data.
+BIDS broadly describes how to rename files and folders and organize them into a standardized directory. It also requires associated metadata files to help explain the experiment and data.
 
 NWB is a specific file type that can store one more modalities within it. Relevant metadata is also stored directly inside the NWB file.
 
