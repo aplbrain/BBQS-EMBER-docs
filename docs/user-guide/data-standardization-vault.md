@@ -34,7 +34,7 @@ A quick summary relevant to sensitive, multimodal human datasets (such as audio/
 
 [https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetoencephalography.html#meg-recording-data]()
 
-#### BEP032 (iEEG / microelectrode extensions)
+#### BEP032 (microelectrode extensions)
 
 [https://bids.neuroimaging.io/extensions/beps/bep_032.html]()
 
