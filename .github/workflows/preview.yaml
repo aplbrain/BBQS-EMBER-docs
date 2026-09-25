@@ -68,6 +68,7 @@ jobs:
           echo "number=$number" >> "$GITHUB_OUTPUT"
 
       - name: Deploy preview
+        id: preview
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./site
@@ -76,3 +77,28 @@ jobs:
           deploy-repository: ${{ vars.PREVIEW_REPOSITORY }}
           token: ${{ secrets.PREVIEW_DEPLOY_TOKEN }}
           pages-base-url: ${{ vars.PREVIEW_BASE_URL }}
+          # The action's own sticky comment cannot work here: it calls
+          # sticky-pull-request-comment without a `number`, which then resolves
+          # the pull request from the event payload, and a workflow_run payload
+          # has none. The `pr-number` input above only feeds the deploy path.
+          # So comment: false, and the step below posts it with an explicit
+          # number. Do not re-enable this expecting a comment to appear.
+          comment: false
+          # Defaults to "Deploy preview for PR ${{ github.event.number }}",
+          # which renders with a blank number under workflow_run.
+          deploy-commit-message: >-
+            Deploy preview for PR ${{ steps.pr.outputs.number }} 🛫
+
+      - name: Comment preview URL on the pull request
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-preview
+          # Required: without it this resolves the pull request from the event
+          # payload, which workflow_run does not provide.
+          number: ${{ steps.pr.outputs.number }}
+          message: |
+            🚀 Preview for this pull request is published at
+
+            ${{ steps.preview.outputs.preview-url }}
+
+            <sub>Built from ${{ github.event.workflow_run.head_sha }} to `gh-pages` in [`${{ vars.PREVIEW_REPOSITORY }}`](https://github.com/${{ vars.PREVIEW_REPOSITORY }}/tree/gh-pages). Updates on every push; not removed when the pull request closes.</sub>
