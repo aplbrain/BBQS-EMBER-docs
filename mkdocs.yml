@@ -34,6 +34,8 @@ markdown_extensions:
   - pymdownx.highlight
   - admonition
   - pymdownx.details
+  - attr_list
+  - md_in_html
 
 nav:
   - Getting Started: index.md

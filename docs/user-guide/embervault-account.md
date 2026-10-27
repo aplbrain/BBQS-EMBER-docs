@@ -30,7 +30,7 @@ This resource is under active development, and we anticipate EMBER-Vault will be
   3. Select Collection
 5. Follow the steps to link your Globus and EMBER-Vault accounts. 
 6. Once you have authenticated with EMBER-Vault and linked your accounts, you will be routed back to File Manager and see the following:
-  <img src="/assets/VaultAccountSetup_Fig1_NoIAMKeys.png" alt="Globus warning your credentials need setup"/>
+  ![Globus warning your credentials need setup](../assets/VaultAccountSetup_Fig1_NoIAMKeys.png)
     1. **Do not press continue**
 7. Respond to your EMBER-Vault onboarding email to let EMBER admins know so they can connect your user to the data store
 8. Once you receive confirmation from EMBER admins to continue, sign back in to Globus and EMBER-Vault navigating to your EMBER-Vault project collection. You should now have full access and be able to download/upload data as your permissions allow

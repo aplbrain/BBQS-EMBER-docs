@@ -1,6 +1,6 @@
 # Welcome to the EMBER Archive Documentation
 
-<img src="./assets/ember-logo.png" alt="ember_logo" style="width: 20%; display:block; margin-left: auto; margin-right: auto;">
+![ember_logo](assets/ember-logo.png){ style="width: 20%; display:block; margin-left: auto; margin-right: auto;" }
 
 # Getting Started
 
@@ -28,33 +28,29 @@ If your data are:
 
 
 <br>
-<figure style="text-align: center;">
-  <div style="display: flex; flex-direction: column; gap: 16px; align-items: center;">
-    
-    <div style="width: 100%;">
-      <img src="/assets/emberdandi_vault.png"
-           alt="EMBER-DANDI and EMBER-Vault"
-           style="width: 100%;">
-      <p style="font-size: 0.9em; margin-top: 4px;">
-        <strong></strong> How EMBER is architected to support neuroscience
-      </p>
-    </div>
+<figure style="text-align: center;" markdown>
+<div style="display: flex; flex-direction: column; gap: 16px; align-items: center;" markdown>
 
-    <!-- <div style="width: 100%;">
-      <img src="/assets/emberdandi_vault_detail.png"
-           alt="Details of EMBER-DANDI and EMBER-Vault"
-           style="width: 100%;">
-      <p style="font-size: 0.9em; margin-top: 4px;">
-        <strong>(B)</strong> EMBER-DANDI and EMBER-Vault
-      </p>
-    </div> -->
+<div style="width: 100%;" markdown="span">
+![EMBER-DANDI and EMBER-Vault](assets/emberdandi_vault.png){ style="width: 100%;" }
+<p style="font-size: 0.9em; margin-top: 4px;">
+  <strong></strong> How EMBER is architected to support neuroscience
+</p>
+</div>
 
-  </div>
+<!-- <div style="width: 100%;" markdown="span">
+![Details of EMBER-DANDI and EMBER-Vault](assets/emberdandi_vault_detail.png){ style="width: 100%;" }
+<p style="font-size: 0.9em; margin-top: 4px;">
+  <strong>(B)</strong> EMBER-DANDI and EMBER-Vault
+</p>
+</div> -->
 
-  <figcaption style="margin-top: 8px;">
-    EMBER-DANDI is the open data archive that can store animal and de-identified human data.
-    EMBER-Vault is a HIPAA-compliant storage for identifiable human data, such as raw video and audio.
-  </figcaption>
+</div>
+
+<figcaption style="margin-top: 8px;">
+  EMBER-DANDI is the open data archive that can store animal and de-identified human data.
+  EMBER-Vault is a HIPAA-compliant storage for identifiable human data, such as raw video and audio.
+</figcaption>
 </figure>
 
 
@@ -158,30 +154,26 @@ EMBER is also planning development of a cloud-based analysis ecosystem connected
 
 
 <br>
-<figure style="text-align: center;">
-  <div style="display: flex; flex-direction: column; gap: 16px; align-items: center;">
-    
-    <div style="width: 100%;">
-      <img src="/assets/emberdandi_vault_hearth.png"
-           alt="EMBER-DANDI and EMBER-Vault"
-           style="width: 100%;">
-      <p style="font-size: 0.9em; margin-top: 4px;">
-        
-      </p>
-    </div>
+<figure style="text-align: center;" markdown>
+<div style="display: flex; flex-direction: column; gap: 16px; align-items: center;" markdown>
 
-    <!-- <div style="width: 100%;">
-      <img src="/assets/emberdandi_vault_detail.png"
-           alt="Details of EMBER-DANDI and EMBER-Vault"
-           style="width: 100%;">
-      <p style="font-size: 0.9em; margin-top: 4px;">
-        <strong>(B)</strong> EMBER-DANDI and EMBER-Vault
-      </p>
-    </div> -->
+<div style="width: 100%;" markdown="span">
+![EMBER-DANDI and EMBER-Vault](assets/emberdandi_vault_hearth.png){ style="width: 100%;" }
+<p style="font-size: 0.9em; margin-top: 4px;">
 
-  </div>
+</p>
+</div>
 
-  <figcaption style="margin-top: 8px;">
-   Envisioned connection of analysis platform EMBER-Hearth to EMBER's data storage platforms.
-  </figcaption>
+<!-- <div style="width: 100%;" markdown="span">
+![Details of EMBER-DANDI and EMBER-Vault](assets/emberdandi_vault_detail.png){ style="width: 100%;" }
+<p style="font-size: 0.9em; margin-top: 4px;">
+  <strong>(B)</strong> EMBER-DANDI and EMBER-Vault
+</p>
+</div> -->
+
+</div>
+
+<figcaption style="margin-top: 8px;">
+  Envisioned connection of analysis platform EMBER-Hearth to EMBER's data storage platforms.
+</figcaption>
 </figure>
