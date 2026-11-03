@@ -318,7 +318,7 @@ experiment.mat
         └── RightAnkle_Z
 ```
 
-This data is transformed into appropriate containers within a singe NWB file:
+This data is transformed into appropriate containers within a single NWB file:
 
 ```
 sub-01_ses-01.nwb
@@ -385,7 +385,7 @@ sub-01_ses-01.nwb
 
 ### Example 2 - iEEG and motion in hybrid BIDS/NWB
 
-Taking the same exmaple of human data as in Example 1, the .mat data is now transformed into both NWB and BIDS within an overarching BIDS folder structure as shown below: 
+Taking the same example of human data as in Example 1, the .mat data is now transformed into both NWB and BIDS within an overarching BIDS folder structure as shown below: 
 
 ```
 myExperiment/
