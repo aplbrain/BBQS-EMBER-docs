@@ -50,31 +50,31 @@ You can see an example of reproducing analysis (figures) at [Example Standardiza
 
 ### Example 1 - Audio, Video, and pose estimation (SLEAP) in NWB
 
-Let's suppose the original data is a single animal in cage with one camera and two microphones:
+Let's suppose the original data is a single animal in cage with one camera and two microphones. The long recording session is split up into separate folders, containing five-minute splits:
 
 ```
 myExperimentSession/
-├── folder1/
+├── split1/
 │   ├── camera.mp4
 │   ├── microphone1.wav
 │   ├── microphone2.wav
 │   └── pose.slp
-├── folder2/
+├── split2/
 │   ├── camera.mp4
 │   ├── microphone1.wav
 │   ├── microphone2.wav
 │   └── pose.slp
-├── folder3/
+├── split3/
 │   ├── camera.mp4
 │   ├── microphone1.wav
 │   ├── microphone2.wav
 │   └── pose.slp
-├── folder4/
+├── split4/
 │   ├── camera.mp4
 │   ├── microphone1.wav
 │   ├── microphone2.wav
 │   └── pose.slp
-└── folder5/
+└── split5/
     ├── camera.mp4
     ├── microphone1.wav
     ├── microphone2.wav
@@ -84,9 +84,9 @@ myExperimentSession/
 ```
 
 
-Each of the audio and video files in the folder1 in myExperiment hold data that is continuous in time with the files of folder2, which is continuous with folder3 and so and and so forth. Altogether, folders 1 - 5 constitute a single recording session. Best practices indicate that all the data should be contained inside a single NWB file.
+Each of the audio and video files in the `split1` folder in myExperiment hold data that is continuous in time with the files of `split2`, which is continuous with `split3` and so and and so forth. Altogether, folders `split1` - `split5` constitute a single recording session. Best practices indicate that all the data should be contained inside a single NWB file.
 
-To make it easier for a secondary user to parse the data, then, we will concatenate all video files together, all audio files together, and all pose data together within the single NWB file. The concatenated video file will be referenced externally, and audio files will be represented with `ndx-sound`. 
+To make it easier for a secondary user to parse the data, then, we will concatenate all video files together, all audio files together, and all pose data together within the single NWB file. The concatenated video file will be referenced externally, and audio files will be represented with `ndx-sound`, an NWB extension for audio data. 
 
 The resulting NWB structure then looks like:
 
