@@ -88,7 +88,7 @@ Each of the audio and video files in the `split1` folder in myExperiment hold da
 
 To make it easier for a secondary user to parse the data, then, we will concatenate all video files together, all audio files together, and all pose data together within the single NWB file. The concatenated video file will be referenced externally, and audio files will be represented with `ndx-sound`, an NWB extension for audio data. 
 
-The resulting NWB structure then looks like:
+The resulting NWB structure for the single file then looks like:
 
 ```
 myExperimentSession.nwb
@@ -318,7 +318,7 @@ experiment.mat
         └── RightAnkle_Z
 ```
 
-This data is transformed into appropriate containers within a single NWB file:
+This data is transformed into appropriate containers within a single NWB file, producing a standardized result that can be loaded with other tools and processing scripts:
 
 ```
 sub-01_ses-01.nwb
@@ -385,7 +385,7 @@ sub-01_ses-01.nwb
 
 ### Example 2 - iEEG and motion in hybrid BIDS/NWB
 
-Taking the same example of human data as in Example 1, the .mat data is now transformed into both NWB and BIDS within an overarching BIDS folder structure as shown below: 
+Taking the same example of human data as in Example 1, the .mat data is now transformed into both NWB and BIDS within an overarching BIDS folder structure. This is a useful option as it allows easy access to individual modalities and organization of larger experiments. This is shown below: 
 
 ```
 myExperiment/
