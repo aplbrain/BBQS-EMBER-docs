@@ -67,6 +67,9 @@ If your data are:
 4. You can embargo your dataset for a desired period of time, which means it is viewable only to you and selected individuals.
 5. You can publish your dataset, making it publicly available and creating a DOI.
 
+!!! tip 
+    If you are on a BBQS team, please reach out to us to get this workflow started at [help@emberarchive.org](mailto:help@emberarchive.org).
+
 ### How do I use EMBER-Vault?
 
 COMING SOON
