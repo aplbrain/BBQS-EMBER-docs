@@ -48,55 +48,368 @@ You can see an example of reproducing analysis (figures) at [Example Standardiza
 
 ## Animal Data
 
-COMING SOON
 ### Example 1 - Audio, Video, and pose estimation (SLEAP) in NWB
-<!-- 
-Let's suppose the original data is a single animal in cage with one camera and two microphones:
+
+Let's suppose the original data is a single animal in cage with one camera and two microphones. The long recording session is split up into separate folders, containing five-minute splits:
 
 ```
 myExperimentSession/
+├── split1/
+│   ├── camera.mp4
+│   ├── microphone1.wav
+│   ├── microphone2.wav
+│   └── pose.slp
+├── split2/
+│   ├── camera.mp4
+│   ├── microphone1.wav
+│   ├── microphone2.wav
+│   └── pose.slp
+├── split3/
+│   ├── camera.mp4
+│   ├── microphone1.wav
+│   ├── microphone2.wav
+│   └── pose.slp
+├── split4/
+│   ├── camera.mp4
+│   ├── microphone1.wav
+│   ├── microphone2.wav
+│   └── pose.slp
+└── split5/
+    ├── camera.mp4
+    ├── microphone1.wav
+    ├── microphone2.wav
+    └── pose.slp
 
 
 ```
 
 
-Each of the audio and video files in the folder1 in myExperiment hold data that is continuous in time with the files of folder2, which is continuous with folder3 and so and and so forth. Altogether, folders 1 - 5 constitute a single recording session. This means that all the data should be contained inside a single NWB file.
+Each of the audio and video files in the `split1` folder in myExperiment hold data that is continuous in time with the files of `split2`, which is continuous with `split3` and so and and so forth. Altogether, folders `split1` - `split5` constitute a single recording session. Best practices indicate that all the data should be contained inside a single NWB file.
 
-To make it easier for a secondary user to parse the data, then, we will concatenate all video files together, all audio files together, and all pose data together within the single NWB file. 
+To make it easier for a secondary user to parse the data, then, we will concatenate all video files together, all audio files together, and all pose data together within the single NWB file. The concatenated video file will be referenced externally, and audio files will be represented with `ndx-sound`, an NWB extension for audio data. 
 
-The resulting NWB structure then looks like:
+The resulting NWB structure for the single file then looks like:
 
 ```
+myExperimentSession.nwb
+│
+├── acquisition/
+│   ├── Audio (AcousticWaveformSeries, ndx-sound)
+│   │   ├── data              # Shape: (samples, 2 channels)
+│   │   │                     # Channel 0: Microphone 1
+│   │   │                     # Channel 1: Microphone 2
+│   │   ├── starting_time
+│   │   └── starting_time.rate
+│   │
+│   └── Camera (ImageSeries)
+│       ├── external_file     # Concatenated video
+│       ├── starting_frame
+│       └── timestamps
+│
+├── processing/
+│   └── behavior/
+│       └── PoseEstimation (ndx-pose)
+│           ├── Nose (PoseEstimationSeries)
+│           │   ├── data       # Shape: (frames, 2)
+│           │   ├── timestamps
+│           │   └── confidence
+│           │
+│           ├── LeftEar (PoseEstimationSeries)
+│           │   ├── data
+│           │   ├── timestamps
+│           │   └── confidence
+│           │
+│           └── RightEar (PoseEstimationSeries)
+│               ├── data
+│               ├── timestamps
+│               └── confidence
+│
+└── general/
+    └── subject/
+        └── subject_id
 ```
- -->
 
-### Example 2 - Audio and Video in BIDS, and pose estimation (SLEAP) in NWB
+The resulting file directory would then be:
 
-<!-- Now let's suppose we want to instead use BIDS, which would allow us to maintain the original way we had split up the experiment session. We can also keep the original data formats for audio and video files. 
+```
+myExperimentSession/
+├── myExperimentSession.nwb
+└── camera_concatenated.mp4
+```
+
+### Example 2 - Audio, video and pose-tracking in BIDS
+
+Now let's suppose we want to instead use BIDS, which would allow us to keep the original data formats for audio and video files. The SLEAP Data would need to be exported into a csv and transformed according to the `motion` modality within BIDS.
 
 The BIDS layout would look like: 
 
 ```
-dataset/
-    sub-01/
-        ses-01/
-            beh/
-               audio-part1.wav
-               video-part1.mp4 
+myExperiment/
+│
+├── dataset_description.json
+├── participants.tsv
+│
+└── sub-01/
+    └── ses-01/
+        │
+        ├── beh/
+        │   ├── sub-01_ses-01_task-free_audio.wav
+        │   ├── sub-01_ses-01_task-free_audio.json
+        │   │
+        │   ├── sub-01_ses-01_task-free_video.mp4
+        │   └── sub-01_ses-01_task-free_video.json
+        │
+        └── motion/
+            ├── sub-01_ses-01_task-free_tracksys-camera_motion.tsv
+            ├── sub-01_ses-01_task-free_tracksys-camera_motion.json
+            └── sub-01_ses-01_task-free_tracksys-camera_channels.tsv
+```
+
+where `audio.wav` and `video.mp4` are the concatenated audio and video respectively from folders 1 - 5. The `_motion.tsv` contains time-series information of tracked body-part coordinates from the complete recording. `_channels.tsv` describes the tracked coordinate channels such as nose X, nose Y, etc.
+
+Alternatively, NWB could be used within the BIDS structure by exporting the .slp files to NWB and placing the file inside the `derivatives/` folder.
+
+```
+myExperiment/
+│
+├── dataset_description.json
+├── participants.tsv
+│
+├── sub-01/
+│   └── ses-01/
+│       └── beh/
+│           ├── sub-01_ses-01_task-free_audio.wav
+│           ├── sub-01_ses-01_task-free_audio.json
+│           │
+│           ├── sub-01_ses-01_task-free_video.mp4
+│           └── sub-01_ses-01_task-free_video.json
+│
+└── derivatives/
+    └── pose-estimation/
+        ├── dataset_description.json
+        │
+        └── sub-01/
+            └── ses-01/
+                └── beh/
+                    └── sub-01_ses-01_task-free_desc-pose_pose.nwb
                 
                
 ```
--->
+
 
 ### Example 3 - Multiple animals interacting
 
+Expanding on Examples 1 and 2, now there are two animals in the cage. For this example, the NWB extension for handling data that represents multiple subjects at the same time should be used. Thus, the audio and video, which now capture two animals at once, will be placed into `ndx-multisubjects`, while the individual pose-tracking information will be placed into each animal's individual NWB file.
+
+The grouped NWB file will look like:
+
+```
+sub-multi_ses-01_behavior.nwb
+│
+├── acquisition/
+│   ├── Audio (AcousticWaveformSeries, ndx-sound)
+│   │   ├── data                # Shape: (samples, 2 channels)
+│   │   │                       # Channel 0: Microphone 1
+│   │   │                       # Channel 1: Microphone 2
+│   │   ├── starting_time
+│   │   └── starting_time.rate
+│   │
+│   └── Camera (ImageSeries)
+│       ├── external_file       # Shared video of both animals
+│       ├── starting_frame
+│       └── timestamps
+│
+├── general/
+    └── subjects (SubjectsTable, ndx-multisubjects)
+        ├── subject_id          # sub-01, sub-02
+        ├── species
+        ├── sex
+        └── individual_subj_link
+            ├── sub-01 -> sub-01_ses-01_behavior.nwb
+            └── sub-02 -> sub-02_ses-01_behavior.nwb
+
+
+```
+
+The individual NWB file will be structured like:
+
+```
+sub-01_ses-01_behavior.nwb
+│
+├── processing/
+│   └── behavior/
+│       └── PoseEstimation (ndx-pose)
+│           ├── Nose (PoseEstimationSeries)
+│           │   ├── data        # Shape: (frames, 2)
+│           │   ├── timestamps
+│           │   └── confidence
+│           │
+│           ├── LeftEar (PoseEstimationSeries)
+│           │   ├── data
+│           │   ├── timestamps
+│           │   └── confidence
+│           │
+│           └── RightEar (PoseEstimationSeries)
+│               ├── data
+│               ├── timestamps
+│               └── confidence
+│
+└── general/
+    └── subject/
+        └── subject_id         # sub-01
+```
+
+The NWB files that represent the entire dataset are then organized according to:
+
+```
+myExperimentSession/
+│
+├── sub-multi_ses-01_behavior.nwb
+│   # Shared audio and video; metadata for both animals
+│
+├── sub-01_ses-01_behavior.nwb
+│   # Pose estimation data for Animal 1
+│
+├── sub-02_ses-01_behavior.nwb
+│   # Pose estimation data for Animal 2
+│
+└── camera_concatenated.mp4
+    # Video containing both animals, referenced by
+    # the ImageSeries in sub-multi_ses-01_behavior.nwb
+```
+If there are multiple sessions, then each session's NWB file should be within the correct individual subject folder or the grouped subject folder.
+
 
 ## De-identified Human Data
-COMING SOON
+
 ### Example 1 - iEEG and motion in NWB
+
+Here, iEEG and motion data are stored in a single .mat file per participant: 
+
+```
+experiment.mat
+└── data (MATLAB struct)
+    │
+    ├── ieeg
+    │   ├── timestamps             # Time vector
+    │   ├── channel_01             # Electrode 1
+    │   ├── channel_02             # Electrode 2
+    │   ├── channel_03             # Electrode 3
+    │   ├── ...
+    │   └── channel_64             # Electrode 64
+    │
+    └── motion
+        ├── timestamps             # Time vector
+        ├── Head_X
+        ├── Head_Y
+        ├── Head_Z
+        ├── Pelvis_X
+        ├── Pelvis_Y
+        ├── Pelvis_Z
+        ├── LeftShoulder_X
+        ├── LeftShoulder_Y
+        ├── LeftShoulder_Z
+        ├── RightShoulder_X
+        ├── RightShoulder_Y
+        ├── RightShoulder_Z
+        ├── ...
+        ├── RightAnkle_X
+        ├── RightAnkle_Y
+        └── RightAnkle_Z
+```
+
+This data is transformed into appropriate containers within a single NWB file, producing a standardized result that can be loaded with other tools and processing scripts:
+
+```
+sub-01_ses-01.nwb
+│
+├── acquisition/
+│   └── iEEG (ElectricalSeries)
+│       ├── data                   # Shape: (samples, 64 channels)
+│       ├── electrodes             # Reference to ElectrodesTable
+│       └── timestamps
+│
+├── processing/
+│   └── behavior/
+│       └── Position (Position)
+│           │
+│           ├── Head (SpatialSeries)
+│           │   ├── data           # Columns: Head_X, Head_Y, Head_Z
+│           │   ├── timestamps
+│           │   ├── reference_frame
+│           │   └── unit
+│           │
+│           ├── Pelvis (SpatialSeries)
+│           │   ├── data           # Columns: Pelvis_X, Pelvis_Y, Pelvis_Z
+│           │   ├── timestamps
+│           │   ├── reference_frame
+│           │   └── unit
+│           │
+│           ├── LeftShoulder (SpatialSeries)
+│           │   ├── data           # Columns: X, Y, Z
+│           │   ├── timestamps
+│           │   ├── reference_frame
+│           │   └── unit
+│           │
+│           ├── RightShoulder (SpatialSeries)
+│           │   ├── data           # Columns: X, Y, Z
+│           │   ├── timestamps
+│           │   ├── reference_frame
+│           │   └── unit
+│           │
+│           ├── LeftAnkle (SpatialSeries)
+│           │   ├── data           # Columns: X, Y, Z
+│           │   ├── timestamps
+│           │   ├── reference_frame
+│           │   └── unit
+│           │
+│           └── RightAnkle (SpatialSeries)
+│               ├── data           # Columns: X, Y, Z
+│               ├── timestamps
+│               ├── reference_frame
+│               └── unit
+│
+└── general/
+    ├── subject/
+    │   └── subject_id            # sub-01
+    │
+    └── extracellular_ephys/
+        ├── electrodes (ElectrodesTable)
+        │   ├── id
+        │   ├── location
+        │   ├── group
+        │   └── ...
+        │
+        └── ElectrodeGroup(s)
+```
 
 ### Example 2 - iEEG and motion in hybrid BIDS/NWB
 
+Taking the same example of human data as in Example 1, the .mat data is now transformed into both NWB and BIDS within an overarching BIDS folder structure. This is a useful option as it allows easy access to individual modalities and organization of larger experiments. This is shown below: 
+
+```
+myExperiment/
+│
+├── dataset_description.json
+├── participants.tsv
+├── README
+│
+└── sub-01/
+    └── ses-01/
+        │
+        ├── ieeg/
+        │   ├── sub-01_ses-01_task-movement_ieeg.nwb
+        │   ├── sub-01_ses-01_task-movement_ieeg.json
+        │   ├── sub-01_ses-01_task-movement_channels.tsv
+        │   ├── sub-01_ses-01_electrodes.tsv
+        │   └── sub-01_ses-01_coordsystem.json
+        │
+        └── motion/
+            ├── sub-01_ses-01_task-movement_tracksys-vicon_motion.tsv
+            ├── sub-01_ses-01_task-movement_tracksys-vicon_motion.json
+            ├── sub-01_ses-01_task-movement_tracksys-vicon_channels.tsv
+            └── sub-01_ses-01_task-movement_tracksys-vicon_channels.json
+```
 
 
 
