@@ -32,7 +32,7 @@ If your data are:
   <div style="display: flex; flex-direction: column; gap: 16px; align-items: center;">
     
     <div style="width: 100%;">
-      <img src="/assets/emberdandi_vault_v2.png"
+      <img src="/assets/emberdandi_vault.png"
            alt="EMBER-DANDI and EMBER-Vault"
            style="width: 100%;">
       <p style="font-size: 0.9em; margin-top: 4px;">
