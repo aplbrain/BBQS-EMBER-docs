@@ -24,7 +24,7 @@ If your data are:
 
 
 - animal data or de-identified human data, use **EMBER-DANDI**, which supports multimodal data from both animals and humans. Human data must not contain any PHI/PII and must be completely deidentified. 
-- sensitive human data, use  **EMBER-Vault**, which supports HIPAA aligned, restricted human data storage
+- sensitive human data, use  **EMBER-Vault**, which supports secure, restricted human data storage
 
 
 <br>
@@ -32,7 +32,7 @@ If your data are:
   <div style="display: flex; flex-direction: column; gap: 16px; align-items: center;">
     
     <div style="width: 100%;">
-      <img src="/assets/emberdandi_vault.png"
+      <img src="/assets/emberdandi_vault_v2.png"
            alt="EMBER-DANDI and EMBER-Vault"
            style="width: 100%;">
       <p style="font-size: 0.9em; margin-top: 4px;">
@@ -53,7 +53,7 @@ If your data are:
 
   <figcaption style="margin-top: 8px;">
     EMBER-DANDI is the open data archive that can store animal and de-identified human data.
-    EMBER-Vault is a HIPAA-compliant storage for identifiable human data, such as raw video and audio.
+    EMBER-Vault is a secure storage for identifiable human data, such as raw video and audio.
   </figcaption>
 </figure>
 
